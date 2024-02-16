@@ -3,44 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Variedades Angie - Moda y Estilo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        header {
+            background-color: #33ACFF;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #FF33C7;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            margin-bottom: 60px; /* Altura del pie de página */
+        }
+        .producto {
+        margin-bottom: 20px;
+        }
+        .producto img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+        }
+        .producto h3, .producto p {
+         text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .redes-sociales {
+        display: flex; /* Establece el contenedor como un flexbox */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        list-style-type: none; /* Elimina los estilos de lista */
+        padding: 0; /* Elimina el relleno */
+        }
+
+        .redes-sociales li {
+        margin-right: 10px; /* Espaciado entre los elementos */
+        }
+
+        .redes-sociales img {
+        width: 50px; /* Ancho deseado */
+        height: auto; /* Altura automática para mantener la proporción */
+        border-radius: 50%; /* Hace que la imagen sea redonda */
+        }
+
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Mi Página Web</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#acerca">Acerca de</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Bienvenido a mi sitio web. Esta es la página de inicio.</p>
-        </section>
-        
-        <section id="acerca">
-            <h2>Acerca de</h2>
-            <p>Soy una persona persona apasionado con el mundo de las tecnologías: TIC</p>
-        </section>
-        
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme en:</p>
-            <p>correo@example.com</p>
-            <p>@jemosquera17</p>
-            <p>+57 315xxxxxxxx</p>
 
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-    </footer>
+<header>
+    <h1>Variedades Angie - Moda y Estilo</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#mujer">Mujer</a></li>
+        <li><a href="#hombre">Hombre</a></li>
+        <li><a href="#ninos">Niños</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="inicio">
+        <h2>¡Bienvenido a Variedades Angie!</h2>
+        <p>Vendemos mercancía con buenos precios para Damas, Caballeros, Niños y Niñas.<br><br>
+        Encuentra las últimas tendencias en moda para todas las edades y estilos.</p>
+    </section>
+
+    <section id="mujer">
+        <h2>Ropa para Mujer</h2>
+        <p>Descubre nuestra amplia selección de prendas para mujer, desde vestidos elegantes hasta conjuntos informales.</p>
+        <div class="producto">
+            <img src="mujer1.jpg" alt="Producto 1">
+            <h3>Lencería REF.CR2088</h3>
+            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
+                acompañado de un hilo con cintura graduable.
+            </p>
+            <p>Precio: $XX.XX</p>
+        </div>
+        <div class="producto">
+            <img src="mujer2.jpg" alt="Producto 2">
+            <h3>Lencería REF.CR2088</h3>
+            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
+                acompañado de un hilo con cintura graduable.
+            </p>
+            <p>Precio: $XX.XX</p>
+        <div class="producto">
+             <img src="mujer3.jpg" alt="Producto 2">
+             <h3>Pijamas</h3>
+             <p> 💜💥Hermosossisimas bata + panty en piel durazno 🍑 tallas unicas elásticas  💜💜💜💜
+             </p>
+             <p>Precio: $XX.XX</p>
+        <!-- Agrega más productos según sea necesario -->
+    </section>
+
+    <section id="hombre">
+        <h2>Ropa para Hombre</h2>
+        <p>Explora nuestra colección de ropa y accesorios para hombre, diseñados para un estilo casual y sofisticado.</p>
+        <div class="producto">
+            <img src="hombre1.jpg" alt="Producto 1">
+            <h3>Lencería REF.CR2088</h3>
+            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
+                acompañado de un hilo con cintura graduable.
+            </p>
+            <p>Precio: $XX.XX</p>
+        </div>
+        <div class="producto">
+            <img src="hombre2.jpg" alt="Producto 1">
+            <h3>Lencería REF.CR2088</h3>
+            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
+                acompañado de un hilo con cintura graduable.
+            </p>
+            <p>Precio: $XX.XX</p>
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+    </section>
+
+    <section id="ninos">
+        <h2>Ropa para Niños</h2>
+        <p>Encuentra ropa adorable y funcional para los más pequeños de la familia, desde recién nacidos hasta adolescentes.</p>
+        <div class="producto">
+            <img src="ninos1.jpg" alt="Producto 1">
+            <h3>Lencería REF.CR2088</h3>
+            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
+                acompañado de un hilo con cintura graduable.
+            </p>
+            <p>Precio: $XX.XX</p>
+        </div>
+        <div class="producto">
+            <img src="ninos2.jpg" alt="Producto 1">
+            <h3>Lencería REF.CR2088</h3>
+            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
+                acompañado de un hilo con cintura graduable.
+            </p>
+            <p>Precio: $XX.XX</p>
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¡Contáctanos para obtener más información sobre nuestros productos y servicios!<br></p>
+        <ul class="redes-sociales">
+            <li><a href="https://www.facebook.com/profile.php?id=100063749671221" target="_blank"><img src="facebook.jpg" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/tuusuario" target="_blank"><img src="instagram.jpg" alt="Instagram"></a></li>
+            <!-- Aqui ira usuario X:<li><a href="https://twitter.com/tuusuario" target="_blank">Twitter</a></li>-->
+            <li><a href="https://wa.me/+573156279243?text=¡Hola%20Variedades%20Angie!%20Estoy%20interesado%20en%20conocer%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank"><img src="whatsapp.jpg" alt="whatsapp"></a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Variedades Angie - Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
