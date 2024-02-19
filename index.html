@@ -15,6 +15,8 @@
         header {
             background-color: #33ACFF;
             padding: 20px;
+            /*display: flex; /* Usa flexbox para alinear elementos */
+            /*align-items: center; /* Alinea verticalmente los elementos */
             text-align: center;
         }
         nav {
@@ -40,6 +42,25 @@
             padding: 20px;
             margin-bottom: 60px; /* Altura del pie de página */
         }
+        #bienvenida {
+        text-align: center; /* Centra el contenido horizontalmente */
+        padding: 20px;
+        background-color: #f1f1f1; /* Color de fondo */
+        border-radius: 10px; /* Bordes redondeados */
+        margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        #bienvenida h2 {
+            font-size: 28px; /* Tamaño de fuente del título */
+            color: #333; /* Color del texto */
+        }
+
+        #bienvenida p {
+            font-size: 16px; /* Tamaño de fuente del texto */
+            line-height: 1.5; /* Espaciado entre líneas */
+            color: #666; /* Color del texto */
+        }
+
         .producto {
         margin-bottom: 20px;
         }
@@ -49,19 +70,67 @@
         height: auto;
         display: block;
         margin: 0 auto 10px;
+        object-fit: cover; /* Para asegurar que las imágenes mantengan su relación de aspecto y se ajusten correctamente */
         }
         .producto h3, .producto p {
          text-align: center;
         }
-
-        footer {
-            background-color: #333;
-            color: #fff;
+        #productos {
+        width: 100%;
+        padding: 20px;
+        }
+        .contenedor-productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        }
+        .producto {
+            width: 200px;
+            margin: 10px;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        }
+        .producto img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Opcional: Añade bordes redondeados a las imágenes */
+        }
+        #ninos .producto img {
+        width: 100%; /* Ancho deseado */
+        height: 60%; /* Altura automática para mantener la proporción */
+        border-radius: 8px; /* Bordes redondeados */
+        }
+        #hombre .producto img {
+        width: 100%; /* Ancho deseado */
+        height: 70%; /* Altura automática para mantener la proporción */
+        border-radius: 8px; /* Bordes redondeados */
+        }
+        footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        }
+        /* Estilos para la sección de contacto */
+        #contacto {
+            background-color: #EAFAF1; /* Color de fondo */
+            padding: 0px; /* Espacio interno */
+            text-align: left; /* Centra el contenido horizontalmente */
+            margin-top: 0px; /* Margen superior */
+        }
+
+        /* Estilos para el título de la sección de contacto */
+        #contacto h2 {
+            color: #333; /* Color del texto */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        /* Estilos para el párrafo de la sección de contacto */
+        #contacto p {
+            font-size: 16px; /* Tamaño de fuente */
+            color: #666; /* Color del texto */
         }
         .redes-sociales {
         display: flex; /* Establece el contenedor como un flexbox */
@@ -69,28 +138,51 @@
         list-style-type: none; /* Elimina los estilos de lista */
         padding: 0; /* Elimina el relleno */
         }
-
         .redes-sociales li {
         margin-right: 10px; /* Espaciado entre los elementos */
         }
-
         .redes-sociales img {
         width: 50px; /* Ancho deseado */
         height: auto; /* Altura automática para mantener la proporción */
         border-radius: 50%; /* Hace que la imagen sea redonda */
+        }     
+         /* Estilos para el título del encabezado */
+         h1 {
+            /*margin-left: 20px; /* Añade margen a la izquierda para separar del perfil */
+            margin: 0 auto; /* Centra horizontalmente el título */
+            color: #fff; /* Color del texto */
         }
-
+        /* Estilos para el párrafo en el encabezado */
+        p {
+            margin: 10px 0; /* Margen superior e inferior */
+            color: #000; /* Color de letra rosa */
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+         /* Estilos para la imagen de perfil */
+         .perfil {
+           /* display: block;*/
+            width: 150px; /* Ancho de la imagen */
+            height: 150px; /* Altura de la imagen */
+            border-radius: 50%; /* Para hacer la imagen redonda */
+            /*margin: 20px auto; /* Centra la imagen horizontalmente y agrega espacio arriba y abajo */
+            margin-bottom: 10px; /* Margen inferior para separarlo del título */
+            /*object-fit: cover; /* Ajusta la imagen dentro del área de visualización */
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Variedades Angie - Moda y Estilo</h1>
+        <!-- Imagen de perfil -->
+        <img class="perfil" src="perfil.jpg" alt="Imagen de perfil">
+        <!-- Título del encabezado -->
+        <h1>Variedades Angie  </h1> 
+        <p>¡Moda y Estilo!</p>  
 </header>
 
 <nav>
     <ul>
-        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#bienvenida">Inicio</a></li>
         <li><a href="#mujer">Mujer</a></li>
         <li><a href="#hombre">Hombre</a></li>
         <li><a href="#ninos">Niños</a></li>
@@ -99,92 +191,136 @@
 </nav>
 
 <main>
-    <section id="inicio">
+    <section id="bienvenida">
         <h2>¡Bienvenido a Variedades Angie!</h2>
-        <p>Vendemos mercancía con buenos precios para Damas, Caballeros, Niños y Niñas.<br><br>
-        Encuentra las últimas tendencias en moda para todas las edades y estilos.</p>
+        <p>Vendemos mercancía con buenos precios para Damas, Caballeros, Niños y Niñas.</p>
+        <p>Encuentra las últimas tendencias en moda para todas las edades y estilos.</p>
     </section>
-
+    
     <section id="mujer">
         <h2>Ropa para Mujer</h2>
         <p>Descubre nuestra amplia selección de prendas para mujer, desde vestidos elegantes hasta conjuntos informales.</p>
-        <div class="producto">
-            <img src="mujer1.jpg" alt="Producto 1">
-            <h3>Lencería REF.CR2088</h3>
-            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
-                acompañado de un hilo con cintura graduable.
-            </p>
-            <p>Precio: $XX.XX</p>
-        </div>
-        <div class="producto">
-            <img src="mujer2.jpg" alt="Producto 2">
-            <h3>Lencería REF.CR2088</h3>
-            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
-                acompañado de un hilo con cintura graduable.
-            </p>
-            <p>Precio: $XX.XX</p>
-        <div class="producto">
-             <img src="mujer3.jpg" alt="Producto 2">
-             <h3>Pijamas</h3>
-             <p> 💜💥Hermosossisimas bata + panty en piel durazno 🍑 tallas unicas elásticas  💜💜💜💜
-             </p>
-             <p>Precio: $XX.XX</p>
-        <!-- Agrega más productos según sea necesario -->
+        <!-- Aquí puede haber más contenido -->
+        <section id="productos">
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="mujer1.jpg" alt="Producto 1">
+                    <h3>Diseño REF.CR2088</h3>
+                    <p>Hermosa Lencería+Bata. Elaborada en mallatex y encaje Danubio</p>
+                </div>
+                <div class="producto">
+                    <img src="mujer7.jpg" alt="Producto 2">
+                    <h3>Pijamas</h3>
+                    <p>💜💥Hermosa bata+Panty en piel durazno 🍑 Tallas únicas elásticas💜💥</p>
+                </div>
+                <div class="producto">
+                    <img src="mujer3.jpg" alt="Producto 2">
+                    <h3>BabyDoll Salomé</h3>
+                    <p>💜💥Tallas: M y L. Elaborado en Mayatex y Encaje💜💥</p>
+                </div>
+                <div class="producto">
+                    <img src="mujer8.jpg" alt="Producto 2">
+                    <h3>Crop Tops </h3>
+                    <p>❤️🤍🖤Hermoso Crop Tops en Encaje. Tallas únicas. Colores disponibles: ❤️🤍🖤</p>
+                </div>
+                <div class="producto">
+                    <img src="mujer6.jpg" alt="Producto 2">
+                    <h3>Traje de baño </h3>
+                    <p>🌊🫧🌊🫧🌊🫧🌊🫧🌊<br>Hermoso traje de baño con 👙top + tanga +falda🩱 </p>
+                </div>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </section>
     </section>
+    
 
     <section id="hombre">
         <h2>Ropa para Hombre</h2>
         <p>Explora nuestra colección de ropa y accesorios para hombre, diseñados para un estilo casual y sofisticado.</p>
-        <div class="producto">
-            <img src="hombre1.jpg" alt="Producto 1">
-            <h3>Lencería REF.CR2088</h3>
-            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
-                acompañado de un hilo con cintura graduable.
-            </p>
-            <p>Precio: $XX.XX</p>
-        </div>
-        <div class="producto">
-            <img src="hombre2.jpg" alt="Producto 1">
-            <h3>Lencería REF.CR2088</h3>
-            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
-                acompañado de un hilo con cintura graduable.
-            </p>
-            <p>Precio: $XX.XX</p>
-        </div>
-        <!-- Agrega más productos según sea necesario -->
+        <!-- Aquí puede haber más contenido -->
+    
+        <section id="productos">
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="hombre1.jpg" alt="Producto 1">
+                    <h3>Conjunto marca NIKE</h3>
+                    <p>Camiseta + Sudadera</p>
+                </div>
+                <div class="producto">
+                    <img src="hombre2.jpg" alt="Producto 2">
+                    <h3>Conjunto marca NIKE</h3>
+                    <p>Camiseta + Sudadera + Tenis + Gorra</p>
+                </div>
+                <div class="producto">
+                    <img src="hombre3.jpg" alt="Producto 3">
+                    <h3>Conjunto marca NIKE</h3>
+                    <p>Camiseta + Pantaloneta + Chanclas + Gorro</p>
+                </div>
+                <div class="producto">
+                    <img src="hombre4.jpg" alt="Producto 4">
+                    <h3>Conjunto marca Jordan 2️⃣3️⃣</h3>
+                    <p>Camiseta + Sudadera</p>
+                </div>
+                <div class="producto">
+                    <img src="hombre5.jpg" alt="Producto 5">
+                    <h3>Conjunto marca Puma</h3>
+                    <p>Camiseta + Sudadera</p>
+                </div>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </section>
     </section>
 
     <section id="ninos">
         <h2>Ropa para Niños</h2>
         <p>Encuentra ropa adorable y funcional para los más pequeños de la familia, desde recién nacidos hasta adolescentes.</p>
-        <div class="producto">
-            <img src="ninos1.jpg" alt="Producto 1">
-            <h3>Lencería REF.CR2088</h3>
-            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
-                acompañado de un hilo con cintura graduable.
-            </p>
-            <p>Precio: $XX.XX</p>
-        </div>
-        <div class="producto">
-            <img src="ninos2.jpg" alt="Producto 1">
-            <h3>Lencería REF.CR2088</h3>
-            <p> Lencería, elaborada en mallatex, encaje Danubio y tirantas graduables con accesorios metálicos 
-                acompañado de un hilo con cintura graduable.
-            </p>
-            <p>Precio: $XX.XX</p>
-        </div>
-        <!-- Agrega más productos según sea necesario -->
+        <!-- Aquí puede haber más contenido -->
+    
+        <section id="productos">
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="ninos1.jpg" alt="Producto 1">
+                    <h3>Pijamas Bart Simpson</h3>
+                    <p>Hermosas Pijamas para los más Chiquitines del Hogar</p>
+                </div>
+                <div class="producto">
+                    <img src="ninos2.jpg" alt="Producto 2">
+                    <h3>Pijamas Sonic</h3>
+                    <p>Hermosas Pijamas para los más Chiquitines del Hogar</p>
+                </div>
+                <div class="producto">
+                    <img src="ninos3.jpg" alt="Producto 3">
+                    <h3>Pijamas Dragon Ball</h3>
+                    <p>Hermosas Pijamas para los más Chiquitines del Hogar</p>
+                </div>
+                <div class="producto">
+                    <img src="ninos4.jpg" alt="Producto 4">
+                    <h3>Conjuntos</h3>
+                    <p>Camisa/Blusa + Short</p>
+                </div>
+                <div class="producto">
+                    <img src="ninos5.jpg" alt="Producto 3">
+                    <h3>Jeans para Niños</h3>
+                    <p>Hermosos Jeans para los Príncipes de la casa, disponible en las Tallas:<br>2️⃣a 1️⃣2️⃣</p>
+                </div>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </section>
+    </section>
+
     </section>
 
     <section id="contacto">
+        <div class="container">
         <h2>Contacto</h2>
         <p>¡Contáctanos para obtener más información sobre nuestros productos y servicios!<br></p>
         <ul class="redes-sociales">
             <li><a href="https://www.facebook.com/profile.php?id=100063749671221" target="_blank"><img src="facebook.jpg" alt="Facebook"></a></li>
             <li><a href="https://www.instagram.com/tuusuario" target="_blank"><img src="instagram.jpg" alt="Instagram"></a></li>
             <!-- Aqui ira usuario X:<li><a href="https://twitter.com/tuusuario" target="_blank">Twitter</a></li>-->
-            <li><a href="https://wa.me/+573156279243?text=¡Hola%20Variedades%20Angie!%20Estoy%20interesado%20en%20conocer%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank"><img src="whatsapp.jpg" alt="whatsapp"></a></li>
+            <li><a href="https://wa.me/+573176411247?text=¡Hola%20Variedades%20Angie!%20Estoy%20interesado%20en%20conocer%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank"><img src="whatsapp.jpg" alt="whatsapp"></a></li>
         </ul>
+    </div>
     </section>
 </main>
 
